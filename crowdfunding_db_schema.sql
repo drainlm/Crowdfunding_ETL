@@ -1,3 +1,8 @@
+﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Link to schema: https://app.quickdatabasediagrams.com/#/d/KY36HA
+-- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+
+
 CREATE TABLE "category" (
     "category_id" varchar(5)   NOT NULL,
     "category" varchar(50)   NOT NULL,
@@ -7,7 +12,7 @@ CREATE TABLE "category" (
 );
 
 CREATE TABLE "subcategory" (
-    "subcategory_id" varchar(8)   NOT NULL,
+    "subcategory_id" varchar(10)   NOT NULL,
     "subcategory" varchar(50)   NOT NULL,
     CONSTRAINT "pk_subcategory" PRIMARY KEY (
         "subcategory_id"
@@ -33,10 +38,10 @@ CREATE TABLE "campaign" (
     "pledged" float   NOT NULL,
     "outcome" varchar(20)   NOT NULL,
     "backers_count" int   NOT NULL,
-    "country" char(2)   NOT NULL,
-    "currency" char(3)   NOT NULL,
-    "launch_date" timestamp   NOT NULL,
-    "end_date" timestamp   NOT NULL,
+    "country" varchar(2)   NOT NULL,
+    "currency" varchar(3)   NOT NULL,
+    "launch_date" date   NOT NULL,
+    "end_date" date   NOT NULL,
     "category_id" varchar(5)   NOT NULL,
     "subcategory_id" varchar(8)   NOT NULL,
     CONSTRAINT "pk_campaign" PRIMARY KEY (
@@ -52,3 +57,4 @@ REFERENCES "category" ("category_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "subcategory" ("subcategory_id");
+
