@@ -1,6 +1,6 @@
 # Crowdfunding_ETL
 
-This script builds an Extract, Transform, Load Pipeline using Python and Pandas. The crowdfunding.xlsx and contacts.xlsx data is transformed and four csv files (category.csv, subcategory, campaign.csv, and contacts.csv) are created.
+This mini project builds an Extract, Transform, Load Pipeline using Python and Pandas. The crowdfunding.xlsx and contacts.xlsx data is transformed and four csv files (category.csv, subcategory, campaign.csv, and contacts.csv) are created. An Entity-Relationship Model (ERD) was made to create a table schema in a Postgres database, to hold the four csv files in four tables.
 
 ## Required
 
@@ -18,17 +18,10 @@ The Crowdfunding data from crowdfunding.xlsx is then used to create the campaign
 
 #### Create the Contacts DataFrame
 
-The contact data from contacts.xlsx is extracted and then the rows are iterated through, converting each row into a dictionary and then creating a list for the contact_id, name, and email. This DataFrame is then saved. The name column is then split into first and last names, which each get their own columns, the combined name column is dropped, and the columns are rordered before the cleaned DataFrame is exported as a csv file. 
+The contact data from contacts.xlsx is extracted and then the rows are iterated through, converting each row into a dictionary and then creating a list for the contact_id, name, and email. This DataFrame is then saved. The name column is then split into first and last names, which each get their own columns, the combined name column is dropped, and the columns are rordered before the cleaned DataFrame is exported as a csv file.
 
 #### Create the Crowdfunding Database
 
-1. Inspect the four CSV files, and then sketch an ERD of the tables by using [QuickDBD](http://www.quickdatabasediagrams.com)
+An ERD was then sketched of the tables using [QuickDBD](http://www.quickdatabasediagrams.com), which was then used to create a table schema for each of the four csv files. This was saved as crowdfunding_db_schema.sql before being used to create tables in the Postgres database, crowdfunding_db. Each csv file was imported and verified to run using a SELECT statement.
 
-* Use the information from the ERD to create a table schema for each CSV file.
-  **Note:** Remember to specify the data types, primary keys, foreign keys, and other constraints.
-* Save the database schema as a Postgres file named `crowdfunding_db_schema.sql`, and save it to your GitHub repository.
-* Create a new Postgres database, named `crowdfunding_db`.
-* Using the database schema, create the tables in the correct order to handle the foreign keys.
-* Verify the table creation by running a `SELECT` statement for each table.
-* Import each CSV file into its corresponding SQL table.
-* Verify that each table has the correct data by running a `SELECT` statement for each.
+![1679617874132](image/README/1679617874132.png)
