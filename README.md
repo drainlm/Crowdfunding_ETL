@@ -7,6 +7,7 @@ This mini project builds an Extract, Transform, Load Pipeline using Python and P
 * pandas
 * numpy
 * json
+* datetime
 
 #### Category and Subcategory DataFrames
 
