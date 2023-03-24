@@ -23,6 +23,16 @@ The contact data from contacts.xlsx is extracted and then the rows are iterated 
 
 #### Create the Crowdfunding Database
 
-An ERD was then sketched of the tables using [QuickDBD](http://www.quickdatabasediagrams.com), which was then used to create a table schema for each of the four csv files. This was saved as crowdfunding_db_schema.sql before being used to create tables in the Postgres database, crowdfunding_db. Each csv file was imported and verified to run using a SELECT statement.
+An ERD was then sketched of the tables using [QuickDBD](http://www.quickdatabasediagrams.com), which was then used to create a table schema for each of the four csv files. 
 
 ![1679617874132](image/README/1679617874132.png)
+
+This was saved as crowdfunding_db_schema.sql before being used to create tables in the Postgres database, crowdfunding_db. Each csv file was imported and verified to run using a SELECT statement. 
+
+![1679623283036](image/README/1679623283036.png)
+
+![1679623297000](image/README/1679623297000.png)
+
+![1679623305146](image/README/1679623305146.png)
+
+![1679623312006](image/README/1679623312006.png)
